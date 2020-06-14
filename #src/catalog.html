@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Catalog</title>
+</head>
+<body>
+    <div class="screen _catalog">
+        @@include('_header.html', {
+            "mod": '_not-main-page',
+            "svg-color": 'black'
+        })
+        <div class="screen-inner _catalog">
+            <div class="catalog-navigation-group">
+                <div class="catalog-content-expander">
+                    <svg class="catalog-content-expander__icon" width="8" height="8" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0H7V7L0 7V9H7V16H9V9H16V7L9 7V0Z" fill="#000F08"/>
+                    </svg>
+                    <div class="catalog-content-expander__text">REFINE ITEMS</div>
+                </div>
+                <nav class="catalog-navigation">
+                    <h2 class="catalog-navigation__header">CATEGORIES</h2>
+                    <a class="catalog-navigation__link" href="">TOPS</a>
+                    <a class="catalog-navigation__link" href="">TEES AND TANKS</a>
+                    <a class="catalog-navigation__link" href="">SHIRTS</a>
+                    <a class="catalog-navigation__link" href="">DRESSES</a>
+                    <a class="catalog-navigation__link" href="">JACKETS</a>
+                    <a class="catalog-navigation__link" href="">KNITWEAR</a>
+                    <a class="catalog-navigation__link" href="">JUMPSUITS</a>
+                    <a class="catalog-navigation__link" href="">BOTTOMS</a>
+                    <a class="catalog-navigation__link" href="">INTIMATES</a>
+                    <a class="catalog-navigation__link" href="">SHORTS</a>
+                    <a class="catalog-navigation__link" href="">JEANS</a>
+                    <a class="catalog-navigation__link" href="">SKIRTS</a>
+                    <a class="catalog-navigation__link" href="">SALE</a>
+                    <a class="catalog-navigation__link" href="">SHOP ALL</a>
+                </nav>   
+                <nav class="catalog-navigation">
+                    <h3 class="catalog-navigation__header">FILTERS</h3>
+                    @@include('_spoiler.html', {
+                        "header": 'SIZE',
+                        "filling": 'sizes'
+                    })
+                    @@include('_spoiler.html', {
+                        "header": 'PRICE',
+                        "filling": 'prices'
+                    })
+                    @@include('_spoiler.html', {
+                        "header": 'COLOR',
+                        "filling": 'colours'
+                    })
+                    @@include('_spoiler.html', {
+                        "header": 'FABRIC',
+                        "filling": 'fabrics'
+                    })
+                    <!-- <a class="catalog-navigation__link" href="">SIZE</a>
+                    <a class="catalog-navigation__link" href="">PRICE</a>
+                    <a class="catalog-navigation__link" href="">COLOR</a>
+                    <a class="catalog-navigation__link" href="">FABRIC</a> -->
+                </nav>
+            </div>
+
+            <div class="catalog-items">
+                @@include('_vertical-gallery.html')
+            </div>
+        </div>
+    </div>
+    @@include('_footer.html')
+</body>
+<script src="js/script.min.js"></script>
+</html>
