@@ -1,0 +1,55 @@
+//----------------------оформление компонента Spoiler--------------------
+
+.spoiler {
+    &-info {
+        display: flex;
+        flex-direction: column;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &__header {        
+                font-size: 12px;
+                padding: 20px 0;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+
+            &__icon {
+                display: inline;
+                position: absolute;
+                top: 48%;
+                left: 4px;
+                transform: translate(-50%, -50%);
+            }
+
+            &__exp-icon  {
+                display: inline;
+                position: absolute;
+                top: 48%;
+                left: 4px;
+                transform: translate(-50%, -50%);
+            }
+
+            &__min-icon  {
+                display: inline;
+                position: absolute;
+                top: 48%;
+                left: 4px;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &__description {
+            font-size: 12px;
+            padding-left: 20px;
+            margin-bottom: 15px;
+
+            &._hidden {
+                display: none;
+            }
+        }
+    }
+}

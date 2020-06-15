@@ -1,0 +1,43 @@
+$main-color: white !global;
+$mob-color: black !global;
+
+//----------------------оформление компонента Button--------------------
+
+.button {
+    color: $main-color;
+    width: 240px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: rgba(0,0,0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &._not-main {
+        background-color: black;
+        font-size: 16px;
+        border-color: black;    
+    }
+}
+
+@media all and (max-width: 950px) {
+    .button {
+        color: $mob-color;
+        width: 220px;
+        height: 40px;
+        border: 2px solid $mob-color;
+        box-sizing: border-box;
+        font-size: 14px;
+        background: rgba(0,0,0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+    }
+
+    &._not-main {
+        color: white;   
+    }
+}

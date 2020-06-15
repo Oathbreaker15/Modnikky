@@ -1,4 +1,236 @@
-.catalog-navigation nav {
-    display: flex;
-    flex-direction: column;
+$main-color: white !global;
+$mob-color: black !global;
+$footer-nav-header-fs: 32px !global;
+$footer-nav-item-fs: 24px !global;
+$footer-input-width: 800px !global;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// @mixin screen() {
+//     color: $main-color;
+//     height: 100vh;    
+// }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+// --------------------- оформление страницы Catalog----------------
+
+.screen {
+    &._catalog {
+        height: auto;
+    }
+
+    &-inner._catalog {
+        display: flex;
+        padding: 0 95px;
+    }
+}
+
+.catalog {
+    &-navigation-group {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        margin-right: 170px;
+    }
+
+    &-navigation {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        color: black;
+    
+        &__header {
+            font-size: 16px;
+            color: black;
+            margin-bottom: 30px;
+        }
+    
+        &__link {
+            font-size: 12px;
+            text-decoration: none;
+            color: black;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-items {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &-item {
+        width: 450px;
+        height: 675px;
+        margin-right: 80px;
+        margin-bottom: 80px;
+    }
+
+    &__item-img {
+        width: 450px;
+        height: 675px;
+        background: #EBEBEB;
+    }
+
+    &__like-icon {
+        display: none;
+    }
+
+    &__item-name,
+    &__item-price,
+    &__item-status {
+        color: black;
+        font-size: 12px;
+        margin-top: 12px;
+        display: none;
+    }
+
+    &__item-status {
+        color: #8C8C8C;
+    }
+
+    &-content-expander {
+        display: none;
+    }
+}
+
+@media all and (max-width: 950px) {
+    .screen {
+        &._catalog {
+            padding: 0 10px;
+            height: auto;
+        }
+    
+        &-inner._catalog {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+    
+    .catalog {
+        &-navigation-group {
+            margin: 0;
+        }
+
+        &-navigation {
+            display: none;
+        
+            &__header {
+                display: none;
+            }
+        
+            &__link {
+                font-size: 12px;
+                text-decoration: none;
+                color: black;
+                margin-bottom: 20px;
+            }
+        }
+    
+        &-items {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin-top: 30px;
+        }
+    
+        &__row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        &__item {
+            width: 320px;
+            max-width: 395px;
+            margin-right: 20px;
+            margin-bottom: 25px;
+        }
+
+        &__item:nth-child(2n) {
+            margin-right: 0;
+        }
+    
+        &__item-img {
+            position: relative;
+            width: 100%;
+            max-width: 395px;
+            height: 590px;
+            background: #EBEBEB;
+        }
+    
+        &__like-icon {
+            display: block;
+            position: absolute;
+            cursor: pointer;
+            top: 93%;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        &__item-name,
+        &__item-price,
+        &__item-status {
+            display: block;
+        }
+    
+        &-content-expander {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            color: black;
+            padding: 25px 0;
+            padding-left: 10px;
+            border-bottom: 2px dashed #D8D8D8;
+    
+            &__icon {
+                display: inline;
+                position: absolute;
+                top: 47%;
+                transform: translate(-50%, -50%);
+            }
+    
+            &__text {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 696px) {
+    .catalog {
+        &__item:nth-child(2n) {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media all and (max-width: 656px) {
+    .catalog {
+        &__item {
+            margin-right: 0px;
+        }
+
+        &__item:nth-child(2n) {
+            margin-right: 0px;
+        }
+    }
 }

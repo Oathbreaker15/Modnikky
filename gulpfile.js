@@ -13,7 +13,7 @@ const path = {
     },
     src: {
         html: [sourceFolder + '/*.html', '!' + sourceFolder + '/_*.html'],
-        css: sourceFolder + '/scss/style.scss',
+        css: sourceFolder + '/scss/**/*.scss',
         js: sourceFolder + '/js/script.js',
         img: sourceFolder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
         fonts: sourceFolder + '/fonts/*.ttf'

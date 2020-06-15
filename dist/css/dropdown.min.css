@@ -1,0 +1,1 @@
+.dropdown{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:15px}.dropdown__header{font-size:12px;cursor:pointer}.dropdown__exp-icon{margin-left:15px}.dropdown__exp-icon._active{-webkit-transform:scaleY(-1);-ms-transform:scaleY(-1);transform:scaleY(-1)}.dropdown-content{display:none}

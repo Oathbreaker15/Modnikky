@@ -1,0 +1,130 @@
+$main-color: white !global;
+$mob-color: black !global;
+$footer-nav-header-fs: 32px !global;
+$footer-nav-item-fs: 24px !global;
+$footer-input-width: 800px !global;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+//----------------------Оформление Десктопного Хэдера-------------------------
+
+.header-inner {
+    display: flex;
+    color: $main-color;
+    padding: 20px 60px;
+
+    &__col {
+        &._left,
+        &._right {
+            display: flex;
+            align-items: center;
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 100%;
+        }
+
+        &._left {
+            justify-content: flex-start;
+        }
+
+        &._right {
+            justify-content: flex-end;
+        }
+
+        &._logo {
+            flex-grow: 0;
+            flex-shrink: 0;
+            padding: 0 20px;
+        }
+
+        &._not-main-page {
+            color: black;
+        }
+    }
+
+    &._mobile {
+        padding: 18px 20px;
+    }
+}
+
+.header-nav {
+    &__item {
+        text-decoration: none;
+        color: $main-color;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        &._not-main-page {
+            color: black;
+        }
+    }
+
+    &._mobile {
+        .header-nav__item {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.header-logo {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+
+    &._mobile {
+        font-size: 22px;
+    }
+}
+
+.header-icon-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $main-color;
+    font-size: 12px;
+    text-transform: uppercase;
+    
+    &__link {
+        text-decoration: none;
+        color: $main-color;
+        margin-left: 10px;
+
+        &._not-main-page {
+            color: black;
+        }
+    }
+}
+
+//----------------------Оформление Мобильного Хэдера-------------------------
+
+@media all and (min-width: 951px) {
+    .header-inner._mobile {
+        display: none;
+    }
+}
+
+
+@media all and (max-width: 950px) {
+    .header-inner:not(._mobile) {
+        display: none;
+    }
+
+    .header-logo._not-main-page {
+        color: black;
+    }
+}

@@ -1,0 +1,205 @@
+$main-color: white !global;
+$mob-color: black !global;
+$footer-nav-header-fs: 32px !global;
+$footer-nav-item-fs: 24px !global;
+$footer-input-width: 800px !global;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+// -----------------------оформление Footer-------------------------
+
+.footer {
+    padding: 0 80px;
+
+    &-top-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__header {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            font-size: 12px;
+            margin-bottom: 40px;
+        }
+
+        &__input-group {
+            width: 400px;
+            border-bottom: 2px solid #D8D8D8;
+            display: flex;
+            align-items: center;
+        }
+
+        &__input {
+            width: 100%;
+            border: none;
+            height: 25px;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        &__link {
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+        }
+    }
+
+    &-lower-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 0;
+
+        
+        &__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__col {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__link,
+        &__header,
+        &__soc-media,
+        &__contact {
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        &__soc-media {
+            display: flex;
+            align-items: center;
+
+            & .footer-lower-section__link {
+                margin-left: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-header-block {
+        display: flex;
+        align-items: center;
+
+        &__header {
+            font-size: 16px; 
+            margin-bottom: 20px;
+        }
+
+        &__exp-icon,
+        &__min-icon {
+            display: none;
+        }
+    }
+}
+
+@media all and (max-width: 950px) {
+    .footer {
+        padding: 0;
+
+        &-top-section {
+            padding: 0 25px;
+    
+            &__header {
+                margin-bottom: 10px;
+            }
+
+            &__form {
+                width: 100%;
+            }
+
+            &__input-group {
+                width: 100%;
+            }
+    
+            &__input {
+                width: 100%;
+                font-size: 12px;
+            }
+    
+            &__link {
+                font-size: 12px;
+            }
+        }
+
+        &-lower-section {
+            flex-direction: column;
+            border-top: 2px dashed #D8D8D8;;
+
+            &__content {  
+                &._hidden {
+                    display: none;
+                }
+            }
+
+            &__col {
+                width: 100%;
+                border-bottom: 2px dashed #D8D8D8;
+            }
+
+            &__link,
+            &__soc-media,
+            &__contact {
+                padding-left: 32px;
+            }
+
+            &__soc-media {
+                & .footer-lower-section__link {
+                    padding: 0;
+                }
+            }
+        }
+
+        &-header-block {
+            position: relative;
+            padding: 23px 0;
+
+            &__header {
+                width: 100%;
+                padding-left: 32px;
+                margin-bottom: 0;
+                cursor: pointer;
+            }
+
+            &__exp-icon {
+                display: inline;
+                position: absolute;
+                left: 14px;
+                transform: translate(-50%, -50%);
+                top: 47%;
+            }
+
+            &__min-icon {
+                display: inline;
+                position: absolute;
+                left: 14px;
+                transform: translate(-50%, -50%);
+                top: 54%;
+            }
+        } 
+    }
+}

@@ -1,0 +1,140 @@
+
+$main-color: white !global;
+$mob-color: black !global;
+$footer-nav-header-fs: 32px !global;
+$footer-nav-item-fs: 24px !global;
+$footer-input-width: 800px !global;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+// --------------------- оформление страницы Bag------------------------
+
+.screen {
+    &._bag {
+        height: auto;
+        color: black;
+    }
+
+    &-inner._bag {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.bag {
+    display: flex;
+    flex-direction: column;
+
+    &-divider {
+        margin-top: 10px;
+        border: 1px solid #D8D8D8;
+    }
+
+    &-header-block {
+
+        &__header {
+            font-size: 20px;
+        }
+
+        &__items {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #8C8C8C;
+        }
+    }
+
+    &-item {
+        display: flex;
+        padding: 60px 0 40px 0;
+
+        &__img {
+            width: 160px;
+            height: 230px;
+            flex-shrink: 0;
+            background-color:#EAE8E9;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+    
+            &__name {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+    
+            &__price {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+    
+            &-specs {
+
+                &__color,
+                &__size,
+                &__quantity {
+                    font-size: 12px;
+                    margin-top: 15px;
+                }
+
+                &__color {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &__icon {
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+        
+    &-remove {
+        font-size: 12px;
+        margin-bottom: 34px;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        &__text {
+            margin-left: 10px;
+        }
+    }
+
+    &-total {
+        padding: 40px 0 120px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__price {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__icons {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media all and (max-width: 950px) {
+    .screen {
+        &-inner._bag {
+            padding: 0 10px;
+        }
+    }
+}

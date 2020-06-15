@@ -1,0 +1,24 @@
+//----------------------оформление компонента Dropdown--------------------
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+    &__header {
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    &__exp-icon {
+        margin-left: 15px;
+
+        &._active {
+            transform: scaleY(-1);
+        }
+    }
+
+    &-content {
+        display: none;
+    }
+}
