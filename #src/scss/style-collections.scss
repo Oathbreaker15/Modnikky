@@ -70,6 +70,7 @@ $mob-color: black !global;
         &__header {
             font-size: 16px;
             margin-bottom: 30px;
+            text-align: center;
         }
 
         &-gallery {
@@ -133,8 +134,8 @@ $mob-color: black !global;
         
             &__img-1 {
                 background: #E7E7E7;
-                width: 425px;
-                height: 630px;
+                width: 100%;
+                padding-bottom: 150%;
             }
         
             &__img-2,
@@ -156,8 +157,11 @@ $mob-color: black !global;
 
             &__text {
                 padding: 0;
-                margin-bottom: -19px;
+                margin-bottom: -17px;
                 z-index: 1;
+                line-height: 1.1;
+                text-align: center;
+                font-weight: bold;
             }
 
             &__item-1,
@@ -168,6 +172,10 @@ $mob-color: black !global;
 
         &-bottom-block {
             padding: 0 4px;
+
+            &__header {
+                font-size: 12px;
+            }
 
             &-gallery {
                 flex-wrap: wrap;
@@ -188,6 +196,7 @@ $mob-color: black !global;
     }
 
     .collections-top-block__img-1 {
-        width: 320px;
+        width: 100%;
+        padding-bottom: 150%;
     }
 }

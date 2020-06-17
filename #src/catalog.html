@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/footer.min.css">
-    <link rel="stylesheet" href="css/header.min.css">
-    <link rel="stylesheet" href="css/spoiler.min.css">
+    <link rel="stylesheet" href="css/components/footer.min.css">
+    <link rel="stylesheet" href="css/components/header.min.css">
+    <link rel="stylesheet" href="css/components/spoiler.min.css">
     <link rel="stylesheet" href="css/style-catalog.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Catalog</title>
@@ -42,7 +42,7 @@
                     <a class="catalog-navigation__link" href="">SHOP ALL</a>
                 </nav>   
                 <nav class="catalog-navigation">
-                    <h3 class="catalog-navigation__header">FILTERS</h3>
+                    <h3 class="catalog-navigation__header _filters">FILTERS</h3>
                     @@include('_spoiler.html', {
                         "header": 'SIZE',
                         "filling": 'sizes'
@@ -59,11 +59,12 @@
                         "header": 'FABRIC',
                         "filling": 'fabrics'
                     })
-                    <!-- <a class="catalog-navigation__link" href="">SIZE</a>
-                    <a class="catalog-navigation__link" href="">PRICE</a>
-                    <a class="catalog-navigation__link" href="">COLOR</a>
-                    <a class="catalog-navigation__link" href="">FABRIC</a> -->
                 </nav>
+                <div class="catalog-sort-outer">
+                    <div class="catalog-sort">SORT: 
+                        <a class="catalog-sort__link" href="">NEWEST</a>
+                    </div>
+                </div>
             </div>
 
             <div class="catalog-items">

@@ -6,6 +6,7 @@
 .product__name {
   font-size: 16px;
   margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .product__price {
@@ -38,9 +39,11 @@
   margin-bottom: 10px;
 }
 
-.product-color__input {
+.product-color__color {
   width: 35px;
   height: 35px;
+  background: #DFDED9;
+  border: 1px solid black;
 }
 
 .product-size {
@@ -66,7 +69,7 @@
 }
 
 .product-size__item {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 12px;
   padding-bottom: 5px;
   cursor: pointer;
@@ -125,6 +128,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-color: black;
 }
 
 .product-info {

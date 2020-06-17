@@ -1,8 +1,7 @@
 .button {
   color: white;
-  width: 240px;
-  height: 50px;
-  border: 2px solid #FFFFFF;
+  padding: 20px 25px;
+  border: 1px solid #FFFFFF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px;
@@ -28,9 +27,8 @@
 @media all and (max-width: 950px) {
   .button {
     color: black;
-    width: 220px;
-    height: 40px;
-    border: 2px solid black;
+    padding: 10px 20px;
+    border: 1px solid black;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     font-size: 14px;
@@ -46,7 +44,8 @@
             align-items: center;
   }
 
-  ._not-main {
+  .button._not-main {
+    font-size: 14px;
     color: white;
   }
 }

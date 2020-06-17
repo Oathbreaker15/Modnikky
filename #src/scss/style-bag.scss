@@ -1,21 +1,6 @@
 
 $main-color: white !global;
 $mob-color: black !global;
-$footer-nav-header-fs: 32px !global;
-$footer-nav-item-fs: 24px !global;
-$footer-input-width: 800px !global;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-}
-
 
 // --------------------- оформление страницы Bag------------------------
 
@@ -37,7 +22,6 @@ body {
     flex-direction: column;
 
     &-divider {
-        margin-top: 10px;
         border: 1px solid #D8D8D8;
     }
 
@@ -45,6 +29,7 @@ body {
 
         &__header {
             font-size: 20px;
+            padding-bottom: 10px;
         }
 
         &__items {
@@ -56,7 +41,7 @@ body {
 
     &-item {
         display: flex;
-        padding: 60px 0 40px 0;
+        padding: 30px 0 40px 0;
 
         &__img {
             width: 160px;
@@ -81,7 +66,6 @@ body {
             }
     
             &-specs {
-
                 &__color,
                 &__size,
                 &__quantity {

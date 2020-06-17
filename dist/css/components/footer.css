@@ -33,6 +33,7 @@ body {
 .footer-top-section__header {
   font-size: 16px;
   margin-bottom: 16px;
+  font-weight: normal;
 }
 
 .footer-top-section__text {
@@ -42,7 +43,7 @@ body {
 
 .footer-top-section__input-group {
   width: 400px;
-  border-bottom: 2px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +138,8 @@ body {
 
 .footer-header-block__header {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-weight: normal;
 }
 
 .footer-header-block__exp-icon,
@@ -221,7 +223,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    top: 47%;
+    top: 48%;
   }
 
   .footer-header-block__min-icon {

@@ -31,6 +31,7 @@ body {
 
     &__text {
         font-size: 16px;
+        line-height: 1.5;
         margin: 20px 0 30px 0;
     }
 }
@@ -45,7 +46,9 @@ body {
         &__header {
             color: $mob-color;
             text-align: center;
-            margin-top: -23px;
+            margin-top: -19px;
+            line-height: 1;
+            padding: 0 20px;
         }
 
         &__divider {
@@ -57,6 +60,7 @@ body {
             font-size: 12px;
             margin: 20px 0 25px 0;
             padding: 0 15px;
+            text-align: center;
         }
     }
 }
@@ -368,12 +372,16 @@ body {
         display: flex;
         justify-content: flex-start;
         color: $main-color;
+
+        &__icon {
+            margin-left: 12.5px;
+        }
     }
 
     &-7-nav__item {
         text-decoration: none;
         color: black;
-        font-size: 12px;
+        font-size: 16px;
         padding-right: 60px;
     }
 
@@ -381,24 +389,30 @@ body {
         display: flex;
         align-items: center;
     }
-
-    &._icon {
-        margin-left: 12.5px;
-    }
 }
 
 @media all and (max-width: 950px) {
     .screen {
         &._scr-7 {
             height: auto;
-            }
+        }
 
         &__content._scr-7  {
             padding: 0 8px;
         }
 
-        &-7__nav-item {
-            padding-right: 40px;
+        &-7-nav {
+            &__item {
+                padding-right: 40px;
+                font-size: 12px;
+                position: relative;
+            }
+          
+            &__icon {
+                top: 47%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+            }
         }
 
         &-7-gallery {
@@ -445,6 +459,7 @@ body {
 
         &-7-text {
             margin-bottom: 120px;
+            font-size: 12px;
         }
         
     }

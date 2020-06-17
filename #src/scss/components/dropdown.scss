@@ -2,12 +2,18 @@
 
 .dropdown {
     display: flex;
-    align-items: center;
-    margin-top: 15px;
+    flex-direction: column;
+
+    &-toggle {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+        cursor: pointer;
+    }
+
 
     &__header {
         font-size: 12px;
-        cursor: pointer;
     }
 
     &__exp-icon {

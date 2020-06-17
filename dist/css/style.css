@@ -30,6 +30,7 @@ body {
 
 .feature-block__text {
   font-size: 16px;
+  line-height: 1.5;
   margin: 20px 0 30px 0;
 }
 
@@ -265,10 +266,14 @@ body {
   color: white;
 }
 
+.screen-7-nav__icon {
+  margin-left: 12.5px;
+}
+
 .screen-7-nav__item {
   text-decoration: none;
   color: black;
-  font-size: 12px;
+  font-size: 16px;
   padding-right: 60px;
 }
 
@@ -279,10 +284,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.screen._icon {
-  margin-left: 12.5px;
 }
 
 @media all and (max-width: 950px) {
@@ -298,7 +299,9 @@ body {
   .feature-block__header {
     color: black;
     text-align: center;
-    margin-top: -23px;
+    margin-top: -19px;
+    line-height: 1;
+    padding: 0 20px;
   }
 
   .feature-block__divider {
@@ -310,6 +313,7 @@ body {
     font-size: 12px;
     margin: 20px 0 25px 0;
     padding: 0 15px;
+    text-align: center;
   }
 
   .screen._scr-1 {
@@ -402,8 +406,18 @@ body {
     padding: 0 8px;
   }
 
-  .screen-7__nav-item {
+  .screen-7-nav__item {
     padding-right: 40px;
+    font-size: 12px;
+    position: relative;
+  }
+
+  .screen-7-nav__icon {
+    top: 47%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 
   .screen-7-gallery {
@@ -460,5 +474,6 @@ body {
 
   .screen-7-text {
     margin-bottom: 120px;
+    font-size: 12px;
   }
 }

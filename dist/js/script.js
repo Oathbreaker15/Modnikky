@@ -17,6 +17,8 @@ testWebP(function (support) {
 const headersFooter = document.querySelectorAll('.footer-header-block__header');
 const spoiler = document.querySelectorAll('.spoiler-info-header__header');
 const headersDropdown = document.querySelectorAll('.dropdown__header');
+const toggleDropdown = document.querySelectorAll('.dropdown-toggle');
+
 
 function Accordeon (arr) {
     arr.forEach((item) => {
@@ -35,12 +37,15 @@ function Accordeon (arr) {
 function Dropdown (arr) {
     arr.forEach((item) => {
         item.addEventListener('click', () => {  
-            if (!item.nextElementSibling.classList.contains('_active')) {
-                item.nextElementSibling.classList.add('_active');
-                item.parentNode.nextElementSibling.style.display = 'block';
-            } else {
-                item.nextElementSibling.classList.remove('_active');
-                item.parentNode.nextElementSibling.style.display = 'none';
+            console.log(item.children[1]);
+            
+            if (!item.children[1].classList.contains('_active')) {
+                item.children[1].classList.add('_active');
+                item.nextElementSibling.style.display = 'block';
+            } 
+            else {
+                item.children[1].classList.remove('_active');
+                item.nextElementSibling.style.display = 'none';
             }
         })
     })
@@ -48,4 +53,4 @@ function Dropdown (arr) {
 
 Accordeon(headersFooter);
 Accordeon(spoiler);
-Dropdown(headersDropdown);
+Dropdown(toggleDropdown);

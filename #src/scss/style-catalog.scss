@@ -1,24 +1,5 @@
 $main-color: white !global;
 $mob-color: black !global;
-$footer-nav-header-fs: 32px !global;
-$footer-nav-item-fs: 24px !global;
-$footer-input-width: 800px !global;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-// @mixin screen() {
-//     color: $main-color;
-//     height: 100vh;    
-// }
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-}
 
 // --------------------- оформление страницы Catalog----------------
 
@@ -51,6 +32,13 @@ body {
             font-size: 16px;
             color: black;
             margin-bottom: 30px;
+            font-weight: normal;
+
+            &._filters {
+                font-size: 12px;
+                color: #8C8C8C;  
+                margin-bottom: 20px;  
+            }
         }
     
         &__link {
@@ -75,15 +63,14 @@ body {
     }
 
     &-item {
-        width: 450px;
-        height: 675px;
+        width: 33.33%;
         margin-right: 80px;
         margin-bottom: 80px;
     }
 
     &__item-img {
-        width: 450px;
-        height: 675px;
+        width: 100%;
+        padding-bottom: 150%;
         background: #EBEBEB;
     }
 
@@ -106,6 +93,19 @@ body {
 
     &-content-expander {
         display: none;
+    }
+
+    &-sort {
+        font-size: 12px;
+
+        &-outer {
+            padding-top: 20px;
+        }
+
+        &__link {
+            color: black;
+            text-decoration: none;
+        }
     }
 }
 
@@ -157,22 +157,17 @@ body {
             justify-content: center;
         }
     
-        &__item {
-            width: 320px;
-            max-width: 395px;
+        &-item {
             margin-right: 20px;
             margin-bottom: 25px;
         }
 
-        &__item:nth-child(2n) {
+        &-item:nth-child(2n) {
             margin-right: 0;
         }
     
         &__item-img {
             position: relative;
-            width: 100%;
-            max-width: 395px;
-            height: 590px;
             background: #EBEBEB;
         }
     
@@ -180,9 +175,8 @@ body {
             display: block;
             position: absolute;
             cursor: pointer;
-            top: 93%;
-            margin-left: 10px;
-            margin-bottom: 10px;
+            bottom: 10px;
+            left: 10px;
         }
 
         &__item-name,
@@ -204,13 +198,18 @@ body {
             &__icon {
                 display: inline;
                 position: absolute;
-                top: 47%;
+                top: 48%;
                 transform: translate(-50%, -50%);
             }
     
             &__text {
                 margin-left: 10px;
+                font-size: 12px;
             }
+        }
+
+        &-sort-outer {
+            display: none;
         }
     }
 }

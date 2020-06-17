@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/footer.min.css">
-    <link rel="stylesheet" href="css/header.min.css">
-    <link rel="stylesheet" href="css/spoiler.min.css">
-    <link rel="stylesheet" href="css/button.min.css">
-    <link rel="stylesheet" href="css/dropdown.min.css">
-    <link rel="stylesheet" href="css/product.min.css">
+    <link rel="stylesheet" href="css/components/footer.min.css">
+    <link rel="stylesheet" href="css/components/header.min.css">
+    <link rel="stylesheet" href="css/components/spoiler.min.css">
+    <link rel="stylesheet" href="css/components/button.min.css">
+    <link rel="stylesheet" href="css/components/dropdown.min.css">
+    <link rel="stylesheet" href="css/components/product.min.css">
     <link rel="stylesheet" href="css/style-bag.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Bag</title>
@@ -28,11 +28,11 @@
                     </div>
                     <div class="bag-divider"></div>
                 </div>
-                @@include('_item-cart.html', {
+                @@include('_bag-item.html', {
                     "item-name":'WHITE BEAUTY MRS BLONDES MID LENGTH DENIM SHORT',
                     "item-price": 'USD $340.00'
                 })
-                @@include('_item-cart.html', {
+                @@include('_bag-item.html', {
                     "item-name":'VICTORIOUS SPILT BACK TOP',
                     "item-price": 'USD $150.00'
                 })

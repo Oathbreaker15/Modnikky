@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.min.css">
-        <link rel="stylesheet" href="css/header.min.css">
-        <link rel="stylesheet" href="css/footer.min.css">
-        <link rel="stylesheet" href="css/button.min.css">
+        <link rel="stylesheet" href="css/components/header.min.css">
+        <link rel="stylesheet" href="css/components/footer.min.css">
+        <link rel="stylesheet" href="css/components/button.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <title>MODNIKKY</title>
     </head>
@@ -21,9 +21,12 @@
                     <h1 class="feature-block__header">NEW <br class="feature-block__divider"> COLLECTION</h1>
                     <p class="feature-block__text">Our easiest chuck-on-and-go staples come with a serious style heritage <br> 
                         that’s liberating, sexy, comfy and supremely cool. </p>
-                    @@include('_button.html', {
-                        "text": 'SHOP NEW ARRIVALS'
-                    })
+                    <div>
+                        @@include('_button.html', {
+                            "text": 'SHOP NEW ARRIVALS'
+                        })
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -34,9 +37,11 @@
                     <h1 class="feature-block__header">VINTAGE INSPIRED</h1>
                     <p class="feature-block__text">Inspired by the ‘70s and 80’s), we know that if you sift through <br>
                         our vintage inspired collection you’re gonna rock the perfect silhouette. </p>
-                    @@include('_button.html', {
-                        "text": 'SHOP NOW'
-                    })
+                    <div>
+                        @@include('_button.html', {
+                            "text": 'SHOP NOW'
+                        })
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,9 +60,11 @@
                     <h1 class="feature-block__header">SUSTAINABLE DENIM</h1>
                     <p class="feature-block__text">What started as a true ‘80s vintage pair of jeans, <br> 
                         finished as a re-energised, wider leg vintage jean with versatile detailing. </p>
-                    @@include('_button.html', {
-                        "text": 'SHOP DENIM'
-                    })
+                    <div>
+                        @@include('_button.html', {
+                            "text": 'SHOP DENIM'
+                        })
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,9 +87,11 @@
                     <h1 class="feature-block__header">PRAY FOR ROCK</h1>
                     <p class="feature-block__text">Beloved and forever relevant, there’s a convenience <br>
                         factor in a well-built pair of all-in-ones.</p>
-                    @@include('_button.html', {
-                        "text": 'SHOP COLLECTION'
-                    })
+                    <div>
+                        @@include('_button.html', {
+                            "text": 'SHOP COLLECTION'
+                        })
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,7 +101,7 @@
                 <nav class="screen-7-nav">
                     <a class="screen-7-nav__item" href="">SHOP INSTAGRAM</a>
                     <a class="screen-7-nav__item  _icon-item" href="">SHOP
-                        <svg class="_icon" width="13" height="12" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="screen-7-nav__icon" width="13" height="12" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.4822 11.5516L1.16058 0.200447C0.894011 -0.0668158 0.466495 -0.0668158 0.199927 0.200447C-0.0666422 0.46771 -0.0666422 0.89634 0.199927 1.1636L11.0387 12.0306L0.199927 22.8976C-0.0666422 23.1649 -0.0666422 23.5935 0.199927 23.8608C0.330696 23.9919 0.506732 24.0625 0.677738 24.0625C0.848745 24.0625 1.02478 23.9969 1.15555 23.8608L12.4772 12.5097C12.7437 12.2475 12.7437 11.8138 12.4822 11.5516Z" fill="#000F08"/>
                         </svg>           
                     </a>
